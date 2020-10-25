@@ -547,7 +547,7 @@ PROFILE_DETECTOR_CASCADE_FILE = '{{ PROFILE_DETECTOR_CASCADE_FILE | default('haa
 
 ## List of optimizers that thumbor will use to optimize images
 ## Defaults to: [] --> ['thumbor.optimizers.jpegtran',]
-OPTIMIZERS = {{ OPTIMIZERS | default([]) }}
+OPTIMIZERS = {{ OPTIMIZERS | default(['thumbor.optimizers.jpegtran','thumbor_plugins.optimizers.pngcrush']) }}
 
 
 ## Path for the jpegtran binary
@@ -557,6 +557,8 @@ JPEGTRAN_PATH = '{{ JPEGTRAN_PATH | default('/usr/bin/jpegtran') }}'
 JPEGTRAN_SCANS_FILE = '{{ JPEGTRAN_SCANS_FILE | default('') }}'
 PROGRESSIVE_JPEG = {{ PROGRESSIVE_JPEG | default(True) }}
 FFMPEG_PATH = '{{ FFMPEG_PATH  | default('/usr/bin/ffmpeg') }}' # Default path for the docker installation in debian
+
+PNGCRUSH_PATH = '/usr/bin/pngcrush'
 
 ################################################################################
 

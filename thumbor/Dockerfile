@@ -22,6 +22,7 @@ RUN  \
         libboost-python-dev \
         libmemcached-dev \
         gifsicle \
+        pngcrush \
         ffmpeg && \
     apt-get clean
 
